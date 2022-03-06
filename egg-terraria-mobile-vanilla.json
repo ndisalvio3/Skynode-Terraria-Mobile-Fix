@@ -1,0 +1,95 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v1",
+        "update_url": null
+    },
+    "exported_at": "2022-03-06T23:13:25+01:00",
+    "name": "Terraria Mobile Vanilla",
+    "author": "nicholas@skynode.pro",
+    "description": "Terraria Vanilla Mobile Patched by Nicholas Disalvio\r\nRepo: https:\/\/github.com\/jbndis\/Skynode-Terraria-Mobile-Fix",
+    "features": null,
+    "images": [
+        "quay.io\/parkervcp\/pterodactyl-images:base_debian"
+    ],
+    "file_denylist": [],
+    "startup": ".\/TerrariaServer.bin.x86_64 -maxplayers {{MAX_PLAYERS}} -port {{PORT}} -pass familiagrossi -world \/home\/container\/saves\/Worlds\/{{WORLD_NAME}}.wld -autocreate {{WORLD_SIZE}} -worldname {{WORLD_NAME}}",
+    "config": {
+        "files": "{\r\n    \"serverconfig.txt\": {\r\n        \"parser\": \"properties\",\r\n        \"find\": {\r\n            \"worldpath\": \"\/home\/container\/saves\/Worlds\",\r\n            \"worldname\": \"{{server.build.env.WORLD_NAME}}\",\r\n            \"world\": \"\/home\/container\/saves\/Worlds\/{{server.build.env.WORLD_NAME}}.wld\",\r\n            \"difficulty\": \"{{server.build.env.WORLD_DIFFICULTY}}\",\r\n            \"autocreate\": \"{{server.build.env.WORLD_SIZE}}\",\r\n            \"port\": \"{{server.build.default.port}}\",\r\n            \"motd\": \"{{server.build.env.SERVER_MOTD}}\"\r\n        }\r\n    }\r\n}",
+        "startup": "{\r\n    \"done\": \"Type 'help' for a list of commands\"\r\n}",
+        "logs": "{}",
+        "stop": "exit"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\n# Vanilla Mobile by Nicholas Disalvio Installation Script\r\n# https:\/\/github.com\/jbndis\/Skynode-Terraria-Mobile-Fix\r\n#\r\n# Server Files: \/mnt\/server\r\n## install packages to get version and download links\r\napt update\r\napt install -y curl wget file unzip fastjar\r\nmkdir -p \/mnt\/server\/\r\ncd \/mnt\/server\/\r\necho -e \"Downloading terraria server files\"\r\nDOWNLOAD_LINK=https:\/\/github.com\/jbndis\/Skynode-Terraria-Mobile-Fix\/releases\/download\/Latest\/ServerLinux.zip\r\n## this is a simple script to validate a download url actaully exists\r\nCLEAN_VERSION=$(echo ${DOWNLOAD_LINK##*\/} | cut -d'-' -f3 | cut -d'.' -f1)\r\necho -e \"running 'curl -sSL ${DOWNLOAD_LINK} -o ${DOWNLOAD_LINK##*\/}'\"\r\ncurl -sSL https:\/\/github.com\/jbndis\/Skynode-Terraria-Mobile-Fix\/releases\/download\/Latest\/ServerLinux.zip -o ${DOWNLOAD_LINK##*\/}\r\necho -e \"Unpacking server files\"\r\njar xvf ${DOWNLOAD_LINK##*\/}\r\necho -e \"\"\r\ncp -R ${CLEAN_VERSION}\/* .\/\r\necho \"0x086519\" | xxd -r - TerrariaServer.exe\r\nchmod +x TerrariaServer.bin.x86_64\r\necho -e \"Cleaning up extra files.\"\r\nrm -rf ${CLEAN_VERSION}\r\necho -e \"Generating config file\"\r\ncat <<EOF > serverconfig.txt\r\nworldpath=\/home\/container\/saves\/Worlds\r\nworldname=default\r\nworld=\/home\/container\/saves\/Worlds\/default.wld\r\ndifficulty=3\r\nautocreate=1\r\nport=7777\r\nmaxplayers=8\r\nEOF\r\nmkdir -p \/mnt\/server\/saves\/Worlds\r\necho -e \"Install complete\"",
+            "container": "debian:buster-slim",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "World Name",
+            "description": "The name for the world file.",
+            "env_variable": "WORLD_NAME",
+            "default_value": "world",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20"
+        },
+        {
+            "name": "World Size",
+            "description": "Defines the worlds size. 3 sizes 1 (small), 2 (medium), 3 (large).",
+            "env_variable": "WORLD_SIZE",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|numeric|digits_between:1,3"
+        },
+        {
+            "name": "Difficulty",
+            "description": "World Difficulty\r\n\r\nOptions: 0(normal), 1(expert), 2(master), 3(journey)",
+            "env_variable": "WORLD_DIFFICULTY",
+            "default_value": "3",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20"
+        },
+        {
+            "name": "MOTD",
+            "description": "Server MOTD",
+            "env_variable": "SERVER_MOTD",
+            "default_value": "Welcome!",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:128"
+        },
+        {
+            "name": "Max Slots",
+            "description": "The max players that can connect to the server",
+            "env_variable": "MAX_PLAYERS",
+            "default_value": "8",
+            "user_viewable": true,
+            "user_editable": false,
+            "rules": "required|numeric"
+        },
+        {
+            "name": "Terraria version",
+            "description": "The version of Terraria mobile",
+            "env_variable": "TERRARIA_VERSION",
+            "default_value": "1.4.0.5",
+            "user_viewable": true,
+            "user_editable": false,
+            "rules": "required|string|max:20"
+        },
+        {
+            "name": "Port",
+            "description": "",
+            "env_variable": "PORT",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20"
+        }
+    ]
+}
