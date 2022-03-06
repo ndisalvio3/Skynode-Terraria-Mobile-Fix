@@ -1,6 +1,6 @@
 #!/bin/bash
-# Vanilla Mobile by Alan Escarcha Installation Script
-# https://github.com/alanescarcha/terraria-mobile-server
+# Vanilla Mobile by Nicholas Disalvio Installation Script
+# https://github.com/jbndis/Skynode-Terraria-Mobile-Fix
 #
 # Server Files: /mnt/server
 ## install packages to get version and download links
@@ -18,8 +18,7 @@ echo -e "Unpacking server files"
 jar xvf ${DOWNLOAD_LINK##*/}
 echo -e ""
 cp -R ${CLEAN_VERSION}/* ./
-chmod +x patcher.ps1
-./patcher.ps1
+echo "0x086519" | xxd -r - TerrariaServer.exe
 chmod +x TerrariaServer.bin.x86_64
 echo -e "Cleaning up extra files."
 rm -rf ${CLEAN_VERSION}
