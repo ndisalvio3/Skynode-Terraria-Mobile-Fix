@@ -18,7 +18,7 @@ echo -e "Unpacking server files"
 jar xvf ${DOWNLOAD_LINK##*/}
 echo -e ""
 cp -R ${CLEAN_VERSION}/* ./
-echo "0086519: 15" | xxd -r - TerrariaServer.exe
+./patcher.ps1
 chmod +x TerrariaServer.bin.x86_64
 echo -e "Cleaning up extra files."
 rm -rf ${CLEAN_VERSION}
