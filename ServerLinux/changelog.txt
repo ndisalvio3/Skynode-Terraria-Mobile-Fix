@@ -1,3 +1,34 @@
+Version 1.4.4.1 Changes -------------------------------------------------------------------------------------------
+
+I. Additions/Changes:
+- Worlds where Moon Lord has been defeated now show a golden border on the world selection menu
+- Added one new achievement
+
+II. Bug Fixes:
+- Fixed some serverconfig options being completely ignored when running servers
+- Fixed a major scaling issue with Journey mode universally having increased stats on enemies
+- Fixed an issue causing players to infinitely use some items without being able to stop
+- Fixed an issue where rescuing certain slimes as the 8th would not unlock The Great Slime Mitosis achievement
+- Fixed character selection not properly applying dyes to players who had dyed pets
+- Fixed a bug that gave an incorrect death message when killed by Jellyfish Shock Attacks
+- Added a failsafe so that broken trees in worldgen will be fixed
+- Fixed Paint Scraper not working with Smart Cursor when removing coatings
+- Fixed some monoliths not properly being "pushed down" into the ground
+- Fixed some liquid rendering issues when in reverse gravity
+- Fixed the change to Chain's recipe from 10->15 not working. It should now properly give 15.
+- Fixed an issue where Magic Quiver's knockback bonus rounded down, which actually nerfed most Knockback values
+- Fixed an issue where Chains were lava immune, but could NOT be "extended" into lava
+- Fixed hanging furniture swinging indoors with the wind
+- Fixed an issue where Jungle critters could spawn in a Corrupt/Crimson Jungle when near Hive blocks
+- Fixed an issue during worldgen where the game hangs indefinitely trying to spawn some objects
+- Fixed an issue with Escape not working properly on the Virtual Keyboard
+- Fixed an issue where the change Moon Lord's Phantasmal Sphere damage was only applied to one of the two versions
+- Fixed a few bugs relating to new content that hasn't been spoiled yet
+- Fixed an issue preventing 2 of the game title texts from showing, but they are still not properly translated in non-English languages for now
+- Fixed an issue with lava spawns from tiles not spawning serverside in multiplayer, resulting in ghost lava
+- Fixing a worldgen issue with trapped chests, which should alleviate at least one possible cause of worldgen freezing on the Everything seed
+
+
 Version 1.4.4 Changes -------------------------------------------------------------------------------------------
 
 I. Labor of Love Content Changes and Additions:
@@ -164,7 +195,6 @@ A. Crashes and Major Issues
 - Fixed a crash issue related to Ice Rod in multiplayer
 - Fixed a crash relating to loading and unloading resource packs
 - Fixed an issue where invalid Torch frames would cause problems on servers
-- Fixed an issue when attempting to verify integrity of game files, a single file would always fail to validate
 
 B. Combat, Enemy, and Weapon Issues
 - Fixed a quirk of Duke Fishron's Cthulhunado that would sometimes instantly spawn it on the player and hurt them unavoidably. It should now spawn a certain distance below the player if there is no floor nearby, allowing the player time to avoid it
@@ -391,7 +421,7 @@ Pumpkin Moon and Frost Moon
 - Pumpkin Moon trophies now drop using Frost Moon drop rates, instead of dropping from 100% of Wave 15 kills.
 - Pumpkin Moon boss drop-rate-by-wave multiplier has been reduced, though drops are still more common than Frost Moon levels. This is partly to account for having a higher wave cap, though drops are still slightly less common than before.
 - Both Pumpkin Moon and Frost Moon's "expert drop bonus" modifier has been reduced slightly, with the base drop rates being increased by the same amount. The end result is that Classic mode drops are slightly more generous, while Expert drop rates stay the same. (This is after taking Pumpkin Moon's previous change into account)
-- Both Pumpkin Moon and Frost Moon now receive a 2.5x point multiplier when playing in Master mode. Previously, they received a 2x multiplier in Expert, but no additional gain in Master.
+- Both Pumpking Moon and Frost Moon now receive a 2.5x point multiplier when playing in Master mode. Previously, they received a 2x multiplier in Expert, but no additional gain in Master.
 
 Poltergeist
 - Can now fly freely into the air, not just on the ground
@@ -501,11 +531,11 @@ Rune Wizard
 Rock Golems
 - Now throw rocks less frequently and the rocks move a little slower as well
 - Spawn rate reduced
-- Base money drop value reduced from 5 to 2.5 Gold
+- Base money drop value reduced 5 to 2.5 Gold
 - Rock Golem Head drops twice as often to account for the rarity change
 
 Giant Fungi Bulbs
-- Will no longer fire at you if they do not have line of sight
+- Will no longer fire at you if they do not have line of sight, nor can their projectiles move through walls anymore
 - Projectiles can no longer move through walls, and will break on impact with blocks
 
 Gastropods
@@ -527,7 +557,7 @@ Necromancers and Ragged Casters
 - Now has a grace period of over a second after teleportation before they begin firing. (This is the same as what Diabolists always had)
 
 All Celestial Pillars
-- Expert/Master worlds no longer have an increased Celestial Pillar kill requirement. They need 100 now like Classic Difficulty Worlds.
+- Expert/Master worlds no longer have an increased Celestial Pillar kill requirement. They need 100 now like Normal Worlds.
 - Upon defeating Moon Lord, Lunar Pillars now require only 50 kills to lower the Pillar shields (applies in all difficulties)
 
 Solar Crawltipedes
@@ -1034,7 +1064,7 @@ Meowmere
 - Projectiles now use local immunity. Each individual bouncing cat has its own damage timer, so they will never conflict with each other.
 
 Terrarian
-- Both the Yoyo and the Orbs now use static immunity. Because the Yoyo and Orbs now each do damage without being blocked by the other, this results in a substantial increase to Terraria's potential damage
+- Both the Yoyo and the Orbs now use static immunity. Because the Yoyo and Orbs now each do damage without being blocked by the other, this results in a substantial increase to Terrarian's potential damage
 
 Jousting Lance
 - Damage increased from 56 to 60
@@ -1296,7 +1326,7 @@ Nimbus Rod
 
 Clinger Staff
 - Duration increased to 5 minutes
-- Now uses static frames, so immune frames will no longer interfere with non-Clinger Staff sources of damage
+- Now uses static frames, so immune frames will no longer interfere with non-Nimbus Rod sources of damage
 
 Magical Harp
 - Knockback increased from 0.25 to 2
