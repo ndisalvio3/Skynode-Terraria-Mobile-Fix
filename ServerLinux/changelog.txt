@@ -195,6 +195,7 @@ A. Crashes and Major Issues
 - Fixed a crash issue related to Ice Rod in multiplayer
 - Fixed a crash relating to loading and unloading resource packs
 - Fixed an issue where invalid Torch frames would cause problems on servers
+- Fixed an issue when attempting to verify integrity of game files, a single file would always fail to validate
 
 B. Combat, Enemy, and Weapon Issues
 - Fixed a quirk of Duke Fishron's Cthulhunado that would sometimes instantly spawn it on the player and hurt them unavoidably. It should now spawn a certain distance below the player if there is no floor nearby, allowing the player time to avoid it
@@ -421,7 +422,7 @@ Pumpkin Moon and Frost Moon
 - Pumpkin Moon trophies now drop using Frost Moon drop rates, instead of dropping from 100% of Wave 15 kills.
 - Pumpkin Moon boss drop-rate-by-wave multiplier has been reduced, though drops are still more common than Frost Moon levels. This is partly to account for having a higher wave cap, though drops are still slightly less common than before.
 - Both Pumpkin Moon and Frost Moon's "expert drop bonus" modifier has been reduced slightly, with the base drop rates being increased by the same amount. The end result is that Classic mode drops are slightly more generous, while Expert drop rates stay the same. (This is after taking Pumpkin Moon's previous change into account)
-- Both Pumpking Moon and Frost Moon now receive a 2.5x point multiplier when playing in Master mode. Previously, they received a 2x multiplier in Expert, but no additional gain in Master.
+- Both Pumpkin Moon and Frost Moon now receive a 2.5x point multiplier when playing in Master mode. Previously, they received a 2x multiplier in Expert, but no additional gain in Master.
 
 Poltergeist
 - Can now fly freely into the air, not just on the ground
@@ -531,11 +532,11 @@ Rune Wizard
 Rock Golems
 - Now throw rocks less frequently and the rocks move a little slower as well
 - Spawn rate reduced
-- Base money drop value reduced 5 to 2.5 Gold
+- Base money drop value reduced from 5 to 2.5 Gold
 - Rock Golem Head drops twice as often to account for the rarity change
 
 Giant Fungi Bulbs
-- Will no longer fire at you if they do not have line of sight, nor can their projectiles move through walls anymore
+- Will no longer fire at you if they do not have line of sight
 - Projectiles can no longer move through walls, and will break on impact with blocks
 
 Gastropods
@@ -557,7 +558,7 @@ Necromancers and Ragged Casters
 - Now has a grace period of over a second after teleportation before they begin firing. (This is the same as what Diabolists always had)
 
 All Celestial Pillars
-- Expert/Master worlds no longer have an increased Celestial Pillar kill requirement. They need 100 now like Normal Worlds.
+- Expert/Master worlds no longer have an increased Celestial Pillar kill requirement. They need 100 now like Classic Difficulty Worlds.
 - Upon defeating Moon Lord, Lunar Pillars now require only 50 kills to lower the Pillar shields (applies in all difficulties)
 
 Solar Crawltipedes
@@ -1326,7 +1327,7 @@ Nimbus Rod
 
 Clinger Staff
 - Duration increased to 5 minutes
-- Now uses static frames, so immune frames will no longer interfere with non-Nimbus Rod sources of damage
+- Now uses static frames, so immune frames will no longer interfere with non-Clinger Staff sources of damage
 
 Magical Harp
 - Knockback increased from 0.25 to 2
