@@ -1,3 +1,110 @@
+Version 1.4.4.5 Changes -------------------------------------------------------------------------------------------
+
+I. Additions/Changes:
+- Guides to Critter Companionship, Environmental Preservation, and Peaceful Coexistence can now be toggled on and off via Right Click, either in the inventory or from hotbar
+- All Torches are now transmuted in Shimmer to Aether Torches
+- You can no longer obtain bones via Shimmer decrafting before Skeletron
+- You can no longer obtain Lihzahrd Bricks via Shimmer decrafting before Golem
+
+II. Bug Fixes:
+- Fixed an issue that caused Wall of Flesh's drops to sometimes vanish when the world was converted to Hardmode. Very rare outside of Remix/Everything worlds. 
+- Adding a failsafe that will protect players who get stuck in an excessively long Shimmer state
+- Fixed a potential softlock caused by Shimmer and bouncy blocks
+- Fixed some issues with Golf and Drone cameras being stuck panning to the player too long
+- Fixed Golden Toilets not facilitating proper Poo creation
+- Fixed Shellphones being unable to be decrafted in Shimmer
+- Fixed another exploitable item with Shimmer decrafting
+- Fixed an issue with tile actuation protection extending too far below the tile
+- Fixed an issue with Oceans being drained repeatedly during gameplay
+- Fixed an extremely rare issue with the Jungle Temple not generating on Remix/Everything Seed
+- Fixed an issue allowing enemies to spawn on safe Desert walls
+- Fixed a minor sprite issue with Town Slimes
+- Fixed a punctuation issue with Russian Hotdog tooltips
+- Fixed an issue preventing the Escape key from functioning on menus
+- Fixed explosives on FTW/Everything Seeds hitting multiple times
+- Fixed Abigail's Flower not being able to grow on Mushroom or Ash Grass
+- Fixed the Sickle not being able to get Hay from Ash Grass and Sea Oats 
+- Fixed an issue with the delay on Darkness messages on the Constant seed not giving enough warning time
+
+Version 1.4.4.4 Changes -------------------------------------------------------------------------------------------
+
+I. Additions/Changes:
+- Both tile and projectile versions of personal storage items now have the Quick Stack to Nearby Chests animation
+- Changed Ghost Costume's Shirt so that you can see your worn pants beneath it. Using it with Familiar Legs will show the bare legs again.
+- Floating container projectiles (Money Trough, Void Bag) now have an increased Quick Stack to Nearby Chests range just like chests do
+- Reduced volume on the Kwad Racer Drone
+- Shimmered debuff state no longer grants invincibility against bosses (invasion will be in a subsequent hotfix)
+
+II. Bug Fixes:
+- Fixed a crash that happened to some players whenever the game tried to save
+- Fixed an issue where NPCs who's names were translated would not drop name-based special drops
+- Fixed some debug dust on Terra Blade
+- Fixed issues where thunder/lightning became very fast when the game's time was sped up, resulting in FPS drops and potentially damaging flashing lights
+- Fixed an issue where holding certain items inhibited the use of some hotkeys when it shouldn't have
+- Fixed some inconsistencies with waterfalls in Retro/Trippy lighting
+- Fixed a few more items being exploitable via Shimmer decrafting
+- Fixed it being possible for Shimmer to spawn too high up in worldgen to properly form its visual effects
+- Fixed an issue where it was possible to have an invalid loadout slot, breaking all loadout functionality
+- Fixed an issue with loadout vanities in multiplayer not syncing to other players
+- Fixed a visual issue with NPC arm sprites during combat animations when Shimmered
+- Fixed a few minor tooltip and item name inconsistencies
+
+Version 1.4.4.3 Changes -------------------------------------------------------------------------------------------
+
+I. Bug Fixes:
+- Fixed an issue preventing Quick Stack to Nearby Chests from working with some chests
+- Fixed an issue where Favorited items in Void Bag would be placed into the player's inventory when Looting the Void Bag
+- Fixed an issue when Clentaminator solutions would break trees and cause them to drop the wrong wood
+- Fixed a typo in Ash Wood Breastplate's name
+- Fixed Royal Gel not protecting against Shimmer Slimes
+- Fixed an issue where Spear Range Boost Effects would have unreliable hit detection at high melee speeds
+- Fixed Bottled Honey not giving the Honey buff when used with Quick Heal
+- NPC Shops no longer update their discount price at all once the shop is open. Reenabled moving Greedy Ring/Discount Card in the accessory slots when the shop is open (since the price will no longer change dynamically)
+- Fixed Enchanted Moondial not recharging when Blood Moon/Eclipse occur naturally
+- Fixed an issue where Shimmered items that create Falling Stars would have the Falling Stars vanish instantly during day. Additionally, Falling Stars which are currently in the process of being "picked up" by a player will not vanish during day
+- Fixed an issue where Pearlsand was not properly flagged as a Material for some crafting recipes which took any Sand
+- Fixed Volcano's detonation sound playing for players very far away
+- Fixed Don't Starve death sounds not playing on Constant Seeds
+- Fixed an issue allowing you to switch loadouts while dead, frozen, webbed or stoned
+- Fixed text issue with Fallen Starfish tooltip and Quest text giving the wrong location for fishing
+- Fixed a worldgen issue that would allow thin ice chasms to override Chests
+- Fixed the smart cursor outline of the Barrel not matching its shape
+- Minor updates to other language localization
+- Fixed a line of stray pixels on the Wand of Frosting sprite
+- Fixed an issue with Spear Range Boost Effects looking odd on Minecarts in some scenarios
+- Fixed Abigail's Flower being able to grow over and break a bunch of tiles it shouldn't be able to break
+- Fixed Gamepad Fast Use causing some items to be used indefinitely
+- Fixed Tortured Souls being able to pick up coins (who would want to give even MORE money to the tax man?)
+
+II. Balance
+- A few items were set to be non-decraftable in Shimmer due to exploits
+- Reduced the sell value of Light Disc, Bananarang, Fairy Boots, and Hellfire Treads to be more reasonable
+- Fixed an issue with Sword Range Boost Effects not properly hitting behind the player, and generally improved their hit detection accuracy across the board
+- Fixed Blade of Grass Razor Leaves not inflicting Poison
+
+Version 1.4.4.2 Changes -------------------------------------------------------------------------------------------
+
+I. Additions/Changes:
+- Updating non-English localization files to account for some last minute changes and adjustments
+
+II. Bug Fixes:
+- Fixed an issue introduced in 1.4.4.1 that prevented Mac/Linux from launching properly
+- Fixed some additional Mac/Linux related launching and server issues
+- Fixed an issue causing certain usable items to be duplicated on Gamepad/Console/Mobile/Steam Deck
+- Fixed a Gamepad issue preventing items from being assigned to the D-Pad Hotbar properly
+- Fixed a missing tooltip on Aether Campfire
+- Fixed Lock Boxes not being openable with keys
+- Fixed Solar Tablets not working in multiplayer but still consuming the tablet
+- Fixed Pumps turning Lava and Honey into Water
+- Fixed a softlock caused by leaving worlds in certain ways when using Drones or Golf
+- Fixed Brain of Cthulhu teleporting too close to the player in FTW/Everything Seeds. It should no longer be able to directly telefrag the player, but the Brain is not avoiding you, so a rapidly moving player may still find themselves in its new teleport position.
+- Fixed a visual issue caused by using some spears in reverse gravity
+- Fixed some tile merging issues with dirt
+- Fixed an issue causing some Clentaminator Solutions to consume far too much ammo per shot
+- Fixed some Melee Speed tooltip inconsistencies on 2 items
+- Fixed Smart Cursor trying to place Boulders on Pylons
+
+
 Version 1.4.4.1 Changes -------------------------------------------------------------------------------------------
 
 I. Additions/Changes:
@@ -1679,7 +1786,7 @@ Mech Cart
 - Now has the same speed and stats as other minecarts, and does not generate lasers (This will be addressed by a new item, the Minecart Upgrade Kit)
 
 Drill Mount
-- Can now break walls right right click
+- Can now break walls with right click
 - Dig speed is roughly 3x faster
 
 Spectre Pickaxe
